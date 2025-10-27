@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class GhostController : MonoBehaviour
 {
     public List<Transform> patrolPoints;
-    public float speed = 2f;
-    public float chaseSpeed = 3.5f;
+    public float speed = 1.0f;
+    public float chaseSpeed = 1.5f;
     public float chaseDistance = 3f;
 
     int current = 0;
@@ -34,7 +34,7 @@ public class GhostController : MonoBehaviour
             Transform target = patrolPoints[current];
             Vector3 dir = (target.position - transform.position);
             dir.y = 0;
-            if (dir.magnitude < 0.2f)
+            if (dir.magnitude < 0.5f)
             {
                 current = (current + 1) % patrolPoints.Count;
             }
@@ -53,3 +53,6 @@ public class GhostController : MonoBehaviour
         }
     }
 }
+
+
+
