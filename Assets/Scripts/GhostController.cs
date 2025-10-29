@@ -5,8 +5,8 @@ public class GhostController : MonoBehaviour
 {
     public List<Transform> patrolPoints;
     public float speed = 1.0f;
-    public float chaseSpeed = 1.5f;
-    public float chaseDistance = 3f;
+    public float chaseSpeed = 0.5f;
+    public float chaseDistance = 1.5f;
 
     int current = 0;
     Transform player;
